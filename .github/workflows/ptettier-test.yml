@@ -1,10 +1,11 @@
 name: Prettir Demo
 run-name: Prettir Demo
 # on: [pull_request]
-on: pull_request:
-    types: [closed]  # プルリクエストが閉じられたときにトリガーされます。
+on:
+  pull_request:
     branches:
-      - main  # マージが行われるブランチを指定します。
+      - main
+    types: [closed]
 env:
   FILE_PATTERN: "{src,__tests__}/**/*.{ts,tsx,js,jsx}"
 jobs:
