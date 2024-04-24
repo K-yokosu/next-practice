@@ -1,8 +1,7 @@
 import Image from "next/image";
 
 const aaa = () => 
-  {
-  return "github actions test";
+  {return "github actions test";
 }
 ;
 
