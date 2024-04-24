@@ -5,6 +5,8 @@ const aaa = () =>
 }
 ;
 
+
+
 export default function Home() {
   const  bba  :number   =3;
   return (
