@@ -1,7 +1,7 @@
 name: Prettir Demo
 run-name: Prettir Demo
 # on: [pull_request]
-pull_request:
+on: pull_request:
     types: [closed]  # プルリクエストが閉じられたときにトリガーされます。
     branches:
       - main  # マージが行われるブランチを指定します。
