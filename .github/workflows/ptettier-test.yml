@@ -1,8 +1,8 @@
 name: Prettir Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [pull_request]:
-env:
-  FILE_PATTERN: "{src,__tests__}/**/*.{ts,tsx,js,jsx}"
+# env:
+#   FILE_PATTERN: "{src,__tests__}/**/*.{ts,tsx,js,jsx}"
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
