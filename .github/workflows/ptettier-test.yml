@@ -34,7 +34,7 @@ jobs:
         with:
           node-version: '20.x'  # Node.jsのバージョンを指定
 
-      - name: Install dependencies
+      - name: Install yarn
         run: yarn
 
       - name: Install Prettier
@@ -50,3 +50,14 @@ jobs:
       #     git add .
       #     git commit -m "Format code with Prettier"
       #     git push
+      - name: Commit formatted code
+        run: |
+          git add -N . # 新規ファイルを含める
+          if ! git diff --exit-code --quiet
+          then
+            git config user.name github-actions
+            git config user.email github-actions@github.com
+            git add .
+            git commit -m "Format code with Prettier"
+            git push
+          fi
