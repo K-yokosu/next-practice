@@ -1,10 +1,11 @@
 import Image from "next/image";
 
 const aaa = () => 
-  {
-  return "github actions test";
+  {return "github actions test";
 }
 ;
+
+
 
 export default function Home() {
   const  bba  :number   =3;
