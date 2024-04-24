@@ -30,7 +30,7 @@ jobs:
         uses: actions/checkout@v4  # リポジトリのコードをチェックアウト
         with:
           # repository: ridia/pulltestrep
-          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          # token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           # path: pulltestrep
 
       - name: Set up Node.js
