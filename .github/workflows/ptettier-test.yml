@@ -28,6 +28,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4  # リポジトリのコードをチェックアウト
+        with:
+          token: ${{ secrets.PAT }}
         # with:
           # repository: ridia/pulltestrep
           # token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
