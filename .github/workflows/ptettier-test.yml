@@ -22,32 +22,32 @@ jobs:
   #     # - run: echo "🍏 This job's status is ${{ job.status }}."
   #     - uses: actions/setup-node@v1
   prettier:
-    if: github.event.pull_request.merged == true  # マージされた場合に実行されます。
+    if: github.event.pull_request.merged == true # マージされた場合に実行されます。
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4  # リポジトリのコードをチェックアウト
+        uses: actions/checkout@v4 # リポジトリのコードをチェックアウト
         with:
           token: ${{ secrets.PAT }}
         # with:
-          # repository: ridia/pulltestrep
-          # token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          # path: pulltestrep
+        # repository: ridia/pulltestrep
+        # token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        # path: pulltestrep
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20.x'  # Node.jsのバージョンを指定
+          node-version: "20.x" # Node.jsのバージョンを指定
 
       - name: Install yarn
         run: yarn
 
       - name: Install Prettier
-        run: yarn add --dev --exact prettier  # Prettierをインストール
+        run: yarn add --dev --exact prettier # Prettierをインストール
 
       - name: Format with Prettier
-        run: yarn prettier . --write  # フォーマットを実行
+        run: yarn prettier . --write # フォーマットを実行
 
       - name: Commit formatted code
         run: |
