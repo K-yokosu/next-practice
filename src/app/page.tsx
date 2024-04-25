@@ -5,6 +5,10 @@ const aaa = () =>
 }
 ;
 
+const bbb = () => 
+  {return "github actions test";
+}
+;
 
 
 export default function Home() {
@@ -13,6 +17,7 @@ export default function Home() {
     <main>
       <h1>{aaa()}</h1>
       {bba}
+      {bbb()}
     </main>
   );
 }
