@@ -6,7 +6,7 @@ on:
       - main
     types: [closed]
 env:
-  FILE_PATTERN: "{src,__tests__}/**/*.{ts,tsx,js,jsx}"
+  FILE_PATTERN: "src/**/*.{ts,tsx,js,jsx}"
 jobs:
   prettier:
     if: github.event.pull_request.merged == true # マージされた場合に実行されます。
@@ -30,7 +30,7 @@ jobs:
         run: yarn add --dev --exact prettier # Prettierをインストール
 
       - name: Format with Prettier
-        run: yarn prettier . --write # フォーマットを実行
+        run: yarn prettier ${FILE_PATTERN} --write # フォーマットを実行
 
       - name: Commit formatted code
         run: |
